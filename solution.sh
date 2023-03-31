@@ -11,7 +11,6 @@
  echo ok
  cat passwd.fake | awk -F: '{{id=$3}{if(id ~ "23.") print $5}}'
  echo ok
- cat last.fake | awk '{if($1~"^t" && $2=="pts9") print $1}' | sort | uniq
  cat last.fake | awk '{if($1~"^t" && $2=="pts/9") print $1}' | sort | uniq
  echo ok
  cat ps.fake | grep -E -i "^r" | awk '{print $1}' | sed "s/[aeiou]/&&/g" | sort | uniq
