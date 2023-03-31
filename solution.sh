@@ -1,5 +1,5 @@
 #!/bin/bash
- grep -F "economica" | grep "Sun" | awk '{print $1}' | sort | uniq
+ cat last.fake | grep "economica" | grep "Sun" | awk '{print $1}' | sort | uniq
  echo ok
  cat last.fake | grep "23:.. -" | awk '{print $1}' | sort |uniq
  echo ok
